@@ -1,0 +1,49 @@
+.box-container {
+    border: solid 1px var(--eerie-black);
+    /* position: relative; */
+
+}
+
+.box-1 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--bittersweet);
+
+    /* Positioning */
+    position: relative;
+    top: 100px;
+    left: 100px;
+
+}
+
+.box-2 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--lemon-chiffon);
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+.box-3 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--ash-gray);
+
+    /* Positioning */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+
+}
+
+.box-4 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--verdigris);
+}
+
+/* 
+*Positioning
+
+*/

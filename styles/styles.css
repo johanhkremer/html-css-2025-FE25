@@ -41,15 +41,16 @@ main {
     margin: 0px 64px 0px 64px;
     flex: 1;
     margin-bottom: 16px;
+    margin-top: 50px;
 }
 
 header {
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 10; */
 
-    /* position: fixed;
-    width: 100%; */
+    position: fixed;
+    width: 100%;
 }
 
 nav {
