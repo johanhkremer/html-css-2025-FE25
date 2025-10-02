@@ -3,73 +3,117 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Café Aurora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox & Grid</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-    <!--Header-->
+    <!-- Header -->
     <header>
-        <h1><a href="index.html">Café Aurora</a></h1>
-        <nav>
+        <nav aria-label="Main menu" class="navbar">
+            <span></span>
             <a href="index.html">Start</a>
-            <a href="meny.html">Meny</a>
-            <a href="om.html">Om oss</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="box.html">Box</a>
+            <a href="flex.html">Flex</a>
         </nav>
     </header>
 
-    <!--Main-->
+    <!-- Main -->
     <main>
-        <section>
-            <h2 class="red">Välkommen</h2>
-            <p>Hantverkskaffe och nybakat i hjärtat av Malmö.</p>
-            <figure>
-                <img style="width: 300px;" src="./img/A_small_cup_of_coffee.JPG">
-                <figcaption>Vår finaste kopp snutkaffe</figcaption>
-            </figure>
-        </section>
+        <h1>Let's Learn Flexbox, Grid & Positioning!</h1>
+        <div class="card-container">
+            <section aria-labelledby="flexbox-title" class="card ash-gray">
+                <h2 id="flexbox-title">Flexbox - one-dimensional layouts</h2>
+                <p>
+                    Flexbox is useful when you want to arrange elements along a <strong>single axis</strong>
+                    (horizontal or vertical), manage spacing, and reorder items individually.
+                </p>
 
-        <aside>
-            <h3>Veckans nyheter</h3>
-            <p>Gästbönor från Etopien</p>
-            <button>Se våra bönor</button>
-        </aside>
+                <h3>Common CSS rules (Flexbox)</h3>
+                <dl>
+                    <dt><code>display: flex</code></dt>
+                    <dd>Enables flex layout on a container.</dd>
 
-        <section>
-            <h4>Öppettider</h4>
-            <table>
-                <caption>Veckoschema</caption>
-                <thead>
-                    <th>Dag</th>
-                    <th>Tid</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Mån-fre</th>
-                        <td>08.00-17.00</td>
-                    </tr>
-                    <tr>
-                        <th>Lör</th>
-                        <td>09.00-16.00</td>
-                    </tr>
-                    <tr>
-                        <th>Sön</th>
-                        <td>Stängt</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                    <dt><code>flex-direction: row | column</code></dt>
+                    <dd>Chooses the main axis: row (default) or column.</dd>
+
+                    <dt><code>flex-wrap: nowrap | wrap</code></dt>
+                    <dd>Defines whether items should wrap to a new line/column.</dd>
+
+                    <dt><code>gap: 1rem</code></dt>
+                    <dd>Sets spacing between flex items.</dd>
+
+                    <dt><code>justify-content</code></dt>
+                    <dd>Aligns items along the main axis (<code>flex-start</code>, <code>center</code>,
+                        <code>space-between</code>, etc.).
+                    </dd>
+
+                    <dt><code>align-items</code></dt>
+                    <dd>Aligns items along the cross axis (<code>stretch</code>, <code>center</code>, etc.).</dd>
+
+                    <dt><code>align-content</code></dt>
+                    <dd>Aligns multiple rows of items (requires <code>flex-wrap</code> and extra space).</dd>
+
+                    <dt><code>flex: grow shrink basis</code></dt>
+                    <dd>Shorthand for how an item grows/shrinks (e.g. <code>flex: 1 1 200px;</code>).</dd>
+
+                    <dt><code>order</code></dt>
+                    <dd>Controls the visual order of an item (doesn't affect HTML order).</dd>
+
+                    <dt><code>align-self</code></dt>
+                    <dd>Overrides <code>align-items</code> for a single item.</dd>
+                </dl>
+            </section>
+
+            <section aria-labelledby="grid-title" class="card ash-gray">
+                <h2 id="grid-title">CSS Grid - two-dimensional layouts</h2>
+                <p>
+                    Grid is perfect when you need to create <strong>two-dimensional layouts</strong> with
+                    rows and columns and have precise control over placement and span.
+                </p>
+
+                <h3>Common CSS rules (Grid)</h3>
+                <dl>
+                    <dt><code>display: grid</code></dt>
+                    <dd>Enables grid layout on a container.</dd>
+
+                    <dt><code>grid-template-columns</code></dt>
+                    <dd>Defines columns (e.g. <code>repeat(3, 1fr)</code>, <code>200px 1fr</code>).</dd>
+
+                    <dt><code>grid-template-rows</code></dt>
+                    <dd>Defines rows (e.g. <code>auto 1fr auto</code>).</dd>
+
+                    <dt><code>gap</code>, <code>column-gap</code>, <code>row-gap</code></dt>
+                    <dd>Sets spacing between rows and columns.</dd>
+
+                    <dt><code>grid-auto-rows</code>, <code>grid-auto-columns</code></dt>
+                    <dd>Sets the size of automatically created rows/columns.</dd>
+
+                    <dt><code>grid-auto-flow: row | column | dense</code></dt>
+                    <dd>Controls how items are placed if not explicitly positioned.</dd>
+
+                    <dt><code>justify-items</code> / <code>align-items</code></dt>
+                    <dd>Aligns content inside each grid cell (horizontal/vertical).</dd>
+
+                    <dt><code>justify-content</code> / <code>align-content</code></dt>
+                    <dd>Aligns the entire grid within the container.</dd>
+
+                    <dt><code>grid-column</code> / <code>grid-row</code></dt>
+                    <dd>Places an item (e.g. <code>grid-column: 1 / 3;</code> spans two columns).</dd>
+
+                    <dt><code>place-items</code> / <code>place-content</code> / <code>place-self</code></dt>
+                    <dd>Shorthand for setting both justify- and align- values at once.</dd>
+                </dl>
+            </section>
+        </div>
     </main>
 
-    <!--Footer-->
+    <!-- Footer -->
     <footer>
-        <p>2025</p>
-        <p>Café Aurora</p>
+        <p>Layout Land 2025</p>
     </footer>
-    <div class="box"></div>
+
 </body>
 
 </html>

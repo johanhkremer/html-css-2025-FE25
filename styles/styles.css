@@ -1,0 +1,96 @@
+:root {
+    /* Bittersweet */
+    --bittersweet: rgb(237, 106, 90);
+    --bittersweet-50: rgb(237 106 90 / 50%);
+    --bittersweet-25: rgb(237 106 90 / 25%);
+    /* Lemon Chiffon */
+    --lemon-chiffon: rgb(244, 241, 187);
+    --lemon-chiffon-50: rgb(244 241 187 / 50%);
+    --lemon-chiffon-25: rgb(244 241 187 / 25%);
+    /* Ash Grey */
+    --ash-gray: rgb(155, 193, 188);
+    --ash-gray-50: rgb(155 193 188 / 50%);
+    --ash-gray-25: rgb(155 193 188 / 25%);
+    /* Verdigris */
+    --verdigris: rgb(92, 164, 169);
+    --verdigris-50: rgb(92 164 169 / 50%);
+    --verdigris-25: rgb(92 164 169 / 25%);
+    /* Alabaster */
+    --alabaster: rgb(230, 235, 224);
+    --alabaster-50: rgb(230 235 224 / 50%);
+    --alabaster-25: rgb(230 235 224 / 25%);
+    /* Eerie Black */
+    --eerie-black: rgb(33, 37, 41);
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: var(--alabaster);
+    color: var(--eerie-black);
+    display: flex;
+    flex-direction: column;
+    margin: 0
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 64px 0px 64px;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    /* position: fixed;
+    width: 100%; */
+}
+
+nav {
+    display: flex;
+    gap: 16px;
+    background-color: var(--verdigris);
+    padding: 16px;
+    color: var(--alabaster);
+    font-size: large;
+    font-weight: bolder;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    color: var(--bittersweet);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--verdigris);
+    padding: 32px;
+    font-size: large;
+    color: var(--alabaster);
+}
+
+code {
+    font-weight: bold;
+}
+
+.box {
+    font-size: xx-large;
+    font-weight: bolder;
+    border: solid 1px var(--eerie-black);
+
+    /* Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
