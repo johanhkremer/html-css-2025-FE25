@@ -5,20 +5,20 @@
 }
 
 .box-1 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: var(--bittersweet);
 
     /* Positioning */
     position: relative;
-    top: 100px;
-    left: 100px;
+    top: 200px;
+    left: 200px;
 
 }
 
 .box-2 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: var(--lemon-chiffon);
     position: static;
     top: 100px;
@@ -26,8 +26,8 @@
 }
 
 .box-3 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: var(--ash-gray);
 
     /* Positioning */
@@ -38,8 +38,8 @@
 }
 
 .box-4 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: var(--verdigris);
 }
 

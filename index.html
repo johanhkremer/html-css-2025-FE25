@@ -107,6 +107,97 @@
                     <dd>Shorthand for setting both justify- and align- values at once.</dd>
                 </dl>
             </section>
+
+            <section aria-labelledby="positioning-title" class="card ash-gray">
+                <h2 id="positioning-title">Positioning - overlays & pinning</h2>
+                <p>Use positioning for overlays/pinned UI. Use Flex/Grid for page layout (pushing/sizing).</p>
+
+                <h3>Common CSS rules (Positioning)</h3>
+                <dl>
+                    <dt><code>position: static</code></dt>
+                    <dd>Default; ignores <code>top/right/bottom/left</code>.</dd>
+
+                    <dt><code>position: relative</code></dt>
+                    <dd>Stays in flow; can be offset; creates anchor for absolute children.</dd>
+
+                    <dt><code>position: absolute</code></dt>
+                    <dd>Out of flow; positioned relative to nearest non-static ancestor.</dd>
+
+                    <dt><code>position: fixed</code></dt>
+                    <dd>Out of flow; anchored to viewport; stays on scroll.</dd>
+
+                    <dt><code>position: sticky</code></dt>
+                    <dd>Acts relative until threshold, then sticks within its scroll container.</dd>
+
+                    <dt><code>inset</code> / <code>top/right/bottom/left</code></dt>
+                    <dd>Offsets from the containing block; <code>inset</code> is shorthand.</dd>
+
+                    <dt><code>z-index</code></dt>
+                    <dd>Stacking order for positioned elements (higher = on top).</dd>
+                </dl>
+
+                <h3>Patterns</h3>
+                <ul>
+                    <li><strong>Center in box:</strong>
+                        <code>position:absolute; inset:50% auto auto 50%; transform:translate(-50%,-50%);</code>
+                    </li>
+                    <li><strong>Full overlay:</strong> <code>position:absolute; inset:0;</code> (or <code>fixed</code>
+                        for viewport)</li>
+                    <li><strong>Sticky header:</strong> <code>position:sticky; top:0;</code></li>
+                </ul>
+
+                <p><em>Tip:</em> Don't use positioning to push footers—use Flex/Grid instead.</p>
+            </section>
+
+            <section aria-labelledby="responsive-title" class="card ash-gray">
+                <h2 id="responsive-title">Responsive design - mobile first</h2>
+                <p>
+                    Build base styles for small screens and scale up with <strong>min-width</strong> media queries.
+                    Use fluid units, responsive images, and respect user preferences.
+                </p>
+
+                <h3>Common CSS rules (Responsive)</h3>
+                <dl>
+                    <dt><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></dt>
+                    <dd>Enables proper scaling on mobile devices.</dd>
+
+                    <dt><code>@media (min-width: …)</code></dt>
+                    <dd>Mobile-first breakpoints; add rules for larger screens.</dd>
+
+                    <dt><code>flex</code> / <code>grid</code> + <code>gap</code></dt>
+                    <dd>Base layouts that naturally scale across sizes.</dd>
+
+                    <dt><code>width</code> with <code>%</code>, <code>fr</code>, <code>rem</code>, <code>vw</code></dt>
+                    <dd>Prefer fluid units over fixed pixels.</dd>
+
+                    <dt><code>img { max-width:100%; height:auto; }</code></dt>
+                    <dd>Makes images scale; add <code>aspect-ratio</code> and <code>object-fit</code> if needed.</dd>
+
+                    <dt><code>font-size: clamp(min, preferred, max)</code></dt>
+                    <dd>Fluid typography that adapts to the viewport.</dd>
+
+                    <dt><code>container-type</code> + <code>@container</code> (optional)</dt>
+                    <dd>Let components respond to their container (modern support).</dd>
+
+                    <dt><code>@media (prefers-reduced-motion)</code> / <code>(prefers-color-scheme)</code></dt>
+                    <dd>Honor user motion/theme preferences.</dd>
+                </dl>
+
+                <h3>Patterns</h3>
+                <ul>
+                    <li><strong>Columns → rows:</strong> One column on mobile, two/three on larger screens.</li>
+                    <li><strong>Wrapping nav:</strong> Horizontal menu that wraps and centers on small screens.</li>
+                    <li><strong>Media card:</strong> Image on top for mobile, side-by-side on desktop.</li>
+                    <li><strong>Typography:</strong> Headings with <code>clamp()</code>; text width ≈
+                        <code>60–70ch</code>.
+                    </li>
+                    <li><strong>Images:</strong> Use <code>srcset</code> and <code>sizes</code> for appropriate file
+                        sizes.</li>
+                </ul>
+
+                <p><em>Tip:</em> Use a few meaningful breakpoints (e.g., 600/900/1200px) and let as much as possible be
+                    responsive without media queries.</p>
+            </section>
         </div>
     </main>
 
