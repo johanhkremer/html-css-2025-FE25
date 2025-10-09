@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-dark">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="navbar-brand text-light" href="index.html">Start</a>
+                        <a class="navbar-brand text-light" href="boxes-flex.html">Flex</a>
+                        <a class="navbar-brand text-light" href="boxes-grid.html">Grid</a>
+                        <a class="navbar-brand text-light" href="boxes-positioning.html">Positioning</a>
+                        <a class="navbar-brand text-light" href="bootstrap.html">Bootstrap</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4">
+        <div class="container">
+            <h1 class="mb-4">Bootstrap (CSS only) - Test page</h1>
+
+            <!-- Buttons & Alerts (statisk styling, ingen JS) -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Buttons & Alerts</h2>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-outline-dark">Outline</button>
+                    <a class="btn btn-link" href="#">Link style</a>
+                </div>
+                <div class="d-grid gap-2">
+                    <div class="alert alert-primary m-0" role="alert">A simple primary alert—check it out!</div>
+                    <div class="alert alert-success m-0" role="alert">Success! Looks good.</div>
+                    <div class="alert alert-warning m-0" role="alert">Heads up—this is a warning.</div>
+                </div>
+            </section>
+
+            <!-- Grid demo -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Grid (container / row / col)</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Card 1</h3>
+                                <p class="card-text">This card uses Bootstrap spacing, rounded corners and shadow.</p>
+                                <a class="btn btn-outline-primary btn-sm" href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Card 2</h3>
+                                <p class="card-text">Columns stack on mobile and sit side-by-side on larger screens.</p>
+                                <a class="btn btn-outline-primary btn-sm" href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Card 3</h3>
+                                <p class="card-text">Use <code>row</code>, <code>col-*</code> and gutters with
+                                    <code>g-*</code>.
+                                </p>
+                                <a class="btn btn-outline-primary btn-sm" href="#">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Table demo -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Table</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Project</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Portfolio</td>
+                                <td><span class="badge text-bg-success">Live</span></td>
+                                <td>Today</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Grid demo</td>
+                                <td><span class="badge text-bg-warning">WIP</span></td>
+                                <td>Yesterday</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Form styles</td>
+                                <td><span class="badge text-bg-secondary">Draft</span></td>
+                                <td>2 days ago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Form demo (HTML5 validering, ingen JS) -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Form (HTML + Bootstrap CSS)</h2>
+                <form class="row g-3" action="#" method="post">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name *</label>
+                        <input id="name" name="name" type="text" class="form-control" required minlength="2" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email *</label>
+                        <input id="email" name="email" type="email" class="form-control" required />
+                    </div>
+                    <div class="col-12">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input id="subject" name="subject" type="text" class="form-control" maxlength="80" />
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required
+                            minlength="10"></textarea>
+                    </div>
+                    <div class="col-12 form-check">
+                        <input class="form-check-input" type="checkbox" id="consent" required />
+                        <label class="form-check-label" for="consent">I consent to my data being used to respond to this
+                            message.</label>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Utilities demo -->
+            <section class="mb-5">
+                <h2 class="h4 mb-3">Utilities</h2>
+                <div class="p-3 mb-2 bg-light border rounded">Padding <code>.p-3</code>, rounded corners and border.
+                </div>
+                <div class="d-flex gap-2">
+                    <span class="badge text-bg-dark">.text-bg-dark</span>
+                    <span class="badge text-bg-info">.text-bg-info</span>
+                    <span class="badge text-bg-danger">.text-bg-danger</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+</html>
