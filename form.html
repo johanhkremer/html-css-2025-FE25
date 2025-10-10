@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav aria-label="Main menu" class="navbar">
+            <a href="index.html">Start</a>
+            <a href="flex.html">Flex</a>
+            <a href="grid.html">Grid</a>
+            <a href="postioning.html">Positioning</a>
+            <a href="bootstrap.html">Bootstrap</a>
+            <a href="form.html">Form</a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section>
+            <form action="https://httpbin.org/get" method="get" target="result">
+                <label for="firstname">First name:</label>
+                <input type="text" id="firstname" name="firstname">
+                <label for="lastname">Last name:</label>
+                <input type="text" id="lastname" name="lastname">
+
+                <p>Choose your favorite language:</p>
+                <label for="html">HTML</label>
+                <input type="radio" id="html" name="fav-lang" value="HTML">
+                <label for="css">CSS</label>
+                <input type="radio" id="css" name="fav-lang" value="css">
+                <label for="javascript">Javascript</label>
+                <input type="radio" id="javascript" name="fav-lang" value="javascript"><br>
+                <input type="submit" value="submit">
+            </form>
+
+            <div>
+                <h2>Result</h2>
+                <iframe name="result" title="Form result"
+                    style="width:100%;height:320px;border:1px solid #ccc;border-radius:8px;"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Layout Land 2025</p>
+    </footer>
+</body>
+
+</html>
